@@ -1,0 +1,55 @@
+from mailmerge import MailMerge
+template = 'Menuauto.docx'
+document = MailMerge(template)
+
+#print(document.get_merge_fields())
+
+date_zh = '2019年6月21日'
+date = 'June 1st, 2019'
+protein_1_zh = '鸡 - 咖喱鸡块'
+lesson_zh = '库珀健康管理'
+fruit_2 = 'Muskmelon'
+protein_3 = '鱼 - 清蒸多宝鱼'
+lesson = "'Get Cooperized' Health Management Experience Training Course"
+tips_1 = 'Avoid short-term, rush losing weight, which will for sure rebound weight gain, and often gets more weight'
+fruit_1_zh = '哈密瓜'
+tips_2_zh = '不吃或少吃加工后的食品（升糖快，再次饥饿快，还有隐形糖和添加剂）'
+meal = 'dinner'
+soup = 'Seaweed and Egg Soup'
+fruit_2_zh = '香瓜'
+tips_2 = 'Avoid processed food, which has higher glycemic index, plus with hidden sugar and additive'
+fruit_3 = 'Pitaya'
+fruit_1 = 'Hami Melon'
+meal_zh = '晚餐'
+soup_zh = '紫菜蛋花汤'
+protein_2_zh = '贝 - 清蒸粉丝扇贝'
+protein_2 = 'Shellfish - Steamed Scallops'
+protein_1 = 'Chicken - Curry  Chicken'
+fruit_3_zh = '火龙果'
+protein_3_zh = '鱼 - 清蒸多宝鱼'
+
+document.merge(date_zh = '2019年6月21日',
+               date = 'June 21st, 2019',
+               protein_1_zh = '鸡 - 咖喱鸡块',
+               lesson_zh = '库珀健康管理',
+               fruit_2 = 'Muskmelon',
+               protein_3 = 'Fish - Steamed Turbot',
+               lesson = "'Get Cooperized' Health Management Experience Training Course",
+               tips_1_zh = '避免“短平快”的减肥（只会越减越肥！）',
+               tips_1 = 'Avoid short-term, rush losing weight, which will for sure rebound weight gain, and often gets more weight',
+               fruit_1_zh='哈密瓜',
+               tips_2_zh='不吃或少吃加工后的食品（升糖快，再次饥饿快，还有隐形糖和添加剂）',
+               meal = 'dinner',
+               soup = 'Seaweed and Egg Soup',
+               fruit_2_zh = '香瓜',
+               tips_2 = 'Avoid processed food, which has higher glycemic index, plus with hidden sugar and additive',
+               fruit_3 = 'Pitaya',
+               fruit_1 = 'Hami Melon',
+               meal_zh = '晚餐',
+               soup_zh = '紫菜蛋花汤',
+               protein_2_zh = '贝 - 清蒸粉丝扇贝',
+               protein_2 = 'Shellfish - Steamed Scallops',
+               protein_1 = 'Chicken - Curry  Chicken',
+               fruit_3_zh = '火龙果',
+               protein_3_zh = '鱼 - 清蒸多宝鱼')
+document.write('621.docx')
