@@ -4,21 +4,22 @@ document = MailMerge(template)
 
 #print(document.get_merge_fields())
 
-date_zh = '2019年6月21日'
-date = 'June 1st, 2019'
-protein_1_zh = '鸡 - 咖喱鸡块'
-lesson_zh = '库珀健康管理'
-fruit_2 = 'Muskmelon'
-protein_3 = '鱼 - 清蒸多宝鱼'
-lesson = "'Get Cooperized' Health Management Experience Training Course"
-tips_1 = 'Avoid short-term, rush losing weight, which will for sure rebound weight gain, and often gets more weight'
-fruit_1_zh = '哈密瓜'
-tips_2_zh = '不吃或少吃加工后的食品（升糖快，再次饥饿快，还有隐形糖和添加剂）'
+date_zh = '2019年6月22日'
+date = 'June 22nd, 2019'
+protein_1_zh = '3'
+lesson_zh = '2'
+fruit_2 = '1'
+protein_3 = '鱼 23鱼'
+lesson = "'Get Cooper23nt Experience Training Course"
+tips_1_zh = '避免“短平快”的43会越减越肥！）'
+tips_1 = 'Avoid short-term,erosing weight, which will for sure rebound weight gain, and often gets more weight'
+tips_2_zh = '不吃或少吃加工后的（升糖快，再次饥饿快，还有隐形糖和添加剂）'
 meal = 'dinner'
 soup = 'Seaweed and Egg Soup'
 fruit_2_zh = '香瓜'
 tips_2 = 'Avoid processed food, which has higher glycemic index, plus with hidden sugar and additive'
 fruit_3 = 'Pitaya'
+fruit_1_zh = '哈密瓜'
 fruit_1 = 'Hami Melon'
 meal_zh = '晚餐'
 soup_zh = '紫菜蛋花汤'
@@ -28,28 +29,34 @@ protein_1 = 'Chicken - Curry  Chicken'
 fruit_3_zh = '火龙果'
 protein_3_zh = '鱼 - 清蒸多宝鱼'
 
-document.merge(date_zh = '2019年6月21日',
-               date = 'June 21st, 2019',
-               protein_1_zh = '鸡 - 咖喱鸡块',
-               lesson_zh = '库珀健康管理',
-               fruit_2 = 'Muskmelon',
-               protein_3 = 'Fish - Steamed Turbot',
-               lesson = "'Get Cooperized' Health Management Experience Training Course",
-               tips_1_zh = '避免“短平快”的减肥（只会越减越肥！）',
-               tips_1 = 'Avoid short-term, rush losing weight, which will for sure rebound weight gain, and often gets more weight',
-               fruit_1_zh='哈密瓜',
-               tips_2_zh='不吃或少吃加工后的食品（升糖快，再次饥饿快，还有隐形糖和添加剂）',
-               meal = 'dinner',
-               soup = 'Seaweed and Egg Soup',
-               fruit_2_zh = '香瓜',
-               tips_2 = 'Avoid processed food, which has higher glycemic index, plus with hidden sugar and additive',
-               fruit_3 = 'Pitaya',
-               fruit_1 = 'Hami Melon',
-               meal_zh = '晚餐',
-               soup_zh = '紫菜蛋花汤',
-               protein_2_zh = '贝 - 清蒸粉丝扇贝',
-               protein_2 = 'Shellfish - Steamed Scallops',
-               protein_1 = 'Chicken - Curry  Chicken',
-               fruit_3_zh = '火龙果',
-               protein_3_zh = '鱼 - 清蒸多宝鱼')
-document.write('621.docx')
+dict = {date_zh:date,meal_zh:meal,lesson_zh:lesson,
+        protein_1_zh:protein_1,protein_2_zh:protein_2,protein_3_zh:protein_3,
+        fruit_1_zh:fruit_1,fruit_2_zh:fruit_2,fruit_3_zh:fruit_3,
+        tips_1_zh:tips_1,tips_2_zh:tips_2
+        }
+
+document.merge(date_zh = date_zh,
+               date = date,
+               protein_1_zh = protein_1_zh,
+               lesson_zh = lesson_zh,
+               fruit_2 = fruit_2,
+               protein_3 = protein_3,
+               lesson = lesson,
+               tips_1_zh = tips_1_zh,
+               tips_1 = tips_1,
+               fruit_1_zh= fruit_1_zh,
+               tips_2_zh= tips_2_zh,
+               meal = meal,
+               soup = soup,
+               fruit_2_zh = fruit_2_zh,
+               tips_2 = tips_2,
+               fruit_3 = fruit_3,
+               fruit_1 = fruit_1,
+               meal_zh = meal_zh,
+               soup_zh = soup_zh,
+               protein_2_zh = protein_2_zh,
+               protein_2 = protein_2,
+               protein_1 = protein_1,
+               fruit_3_zh = fruit_3_zh,
+               protein_3_zh = protein_3_zh)
+document.write('123.docx')
