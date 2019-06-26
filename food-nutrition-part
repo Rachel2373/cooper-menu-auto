@@ -1,0 +1,10 @@
+food_dict = {'库珀有氧蛋':'Cooper Eggs','白灼大虾':'Shrink'}
+detail_dict ={'库珀有氧蛋':'延年益寿，滋阴补阳。','白灼大虾':'蛋白质丰富'}
+nutrition_dict = {'延年益寿，滋阴补阳。':'Good for health balance.'}
+
+food_zh = input('详细说明的食物：')
+
+document.merge(food_zh = food_zh,
+               nutrition_zh = detail_dict[food_zh],
+               food_en = food_dict[food_zh],
+               nutrition_en = nutrition_dict[detail_dict[food_zh]])
