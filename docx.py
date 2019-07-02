@@ -34,8 +34,8 @@ protein_1 = 'Chicken - Curry  Chicken'
 fruit_3_zh = '火龙果'
 protein_3_zh = '鱼 - 清蒸多宝鱼'
 
-month_dict = {'1月': 'January', '2月': 'February', '3月': 'March', '4月': 'April', '5月': 'May', '6月': 'June', '7月': 'July',
-              '8月': 'August', '9月': 'September', '10月': 'October', '11月': 'November', '12月': 'December'}
+month_dict = {'1': 'January', '2': 'February', '3': 'March', '4': 'April', '5': 'May', '6': 'June', '7': 'July',
+              '8': 'August', '9': 'September', '10': 'October', '11': 'November', '12': 'December'}
 day_dict = {'1': '1st', '2': '2nd', '3': '3rd', '4': '4th', '5': '5th', '6': '6th', '7': '7th', '8': '8th', '9': '9th',
             '10': '10th',
             '11': '11th', '12': '12th', '13': '13th', '14': '14th', '15': '15th', '16': '16th', '17': '17th',
@@ -44,7 +44,7 @@ day_dict = {'1': '1st', '2': '2nd', '3': '3rd', '4': '4th', '5': '5th', '6': '6t
             '27': '27th', '28': '28th',
             '29': '29th', '30': '30th', '31': '31st'}
 meal_dict = {'早餐': 'breakfast menu', '午餐': 'lunch menu', '晚餐': 'dinner menu'}
-protein_dict = {}
+protein_dict = {'虾':'shrink'}
 fruit_dict = {}
 soup_dict = {}
 detail_dict = {}
@@ -52,12 +52,18 @@ nutrition = {}
 food_dict = {}
 tips_dict = {}
 
-year = input('year:')
-month = input('month:')
-day = input('day:')
-meal_zh = input('meal_zh:')
-lesson_zh = input('lesson_zh:')
-lesson_en = input('lesson_en:')
+
+
+year = input('哪年:')
+month = input('哪月:')
+day = input('哪日:')
+meal_zh = input('哪一餐:')
+lesson_zh = input('课程中文名:')
+lesson_en = input('课程英文名:')
+print(protein_dict.keys())
+protein_1_zh = input('蛋白质1:')
+protein_2_zh = input('蛋白质2:')
+protein_3_zh = input('蛋白质3:')
 
 document.merge(year = year,
                month = month,
@@ -68,12 +74,14 @@ document.merge(year = year,
                day_en = day_dict[day],
                lesson_zh = lesson_zh,
                lesson_en = lesson_en,
+               protein_1_zh = protein_1_zh,
+               protein_1= protein_dict[protein_1_zh],
+               protein_2_zh= protein_2_zh,
+               protein_2= protein_dict[protein_2_zh],
+               protein_3_zh= protein_3_zh,
+               protein_3= protein_dict[protein_3_zh],
 
-               protein_1_zh=protein_1_zh,
-
-               fruit_2=fruit_2,
-               protein_3=protein_3,
-
+               fruit_2 = fruit_2,
                tips_1_zh=tips_1_zh,
                tips_1=tips_1,
                fruit_1_zh=fruit_1_zh,
@@ -85,9 +93,7 @@ document.merge(year = year,
                fruit_3=fruit_3,
                fruit_1=fruit_1,
                soup_zh=soup_zh,
-               protein_2_zh=protein_2_zh,
-               protein_2=protein_2,
-               protein_1=protein_1,
-               fruit_3_zh=fruit_3_zh,
-               protein_3_zh=protein_3_zh)
-document.write('demo1.docx')
+
+
+               fruit_3_zh=fruit_3_zh,)
+document.write('demo2.docx')
