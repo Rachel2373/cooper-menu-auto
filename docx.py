@@ -47,7 +47,9 @@ meal_dict = {'早餐': 'breakfast menu', '午餐': 'lunch menu', '晚餐': 'dinn
 protein_dict = {}
 fruit_dict = {}
 soup_dict = {}
+detail_dict = {}
 nutrition = {}
+food_dict = {}
 tips_dict = {}
 
 year = input('year:')
