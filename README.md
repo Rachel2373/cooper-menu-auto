@@ -27,19 +27,19 @@ pycharm无法下载模块包，但可以用cmd pip install下载安装，最后�
 
 在pycharm上编辑了将ui转化为代码的工具，但无法运行，需要在代码后面加上
 
-class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
-    def __init__(self):
-        super(MyWindow, self).__init__()
-        self.setupUi(self)
+    class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
+        def __init__(self):
+            super(MyWindow, self).__init__()
+            self.setupUi(self)
 
 
-if __name__ == "__main__":
-    import sys
+    if __name__ == "__main__":
+        import sys
 
-    app = QtWidgets.QApplication(sys.argv)
-    myshow = MyWindow()
-    myshow.show()
-    sys.exit(app.exec_())
+        app = QtWidgets.QApplication(sys.argv)
+        myshow = MyWindow()
+        myshow.show()
+        sys.exit(app.exec_())
     
 这样运行后可以调用GUI
 
