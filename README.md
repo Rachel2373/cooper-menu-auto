@@ -48,3 +48,45 @@ pycharm无法下载模块包，但可以用cmd pip install下载安装，最后�
 1.如何将GUI上文本框LineEdit中的字符获取到后台
 
 2.如何将"ok"触发运行后台运算的过程
+
+————————————————————————
+
+2019年7月19日
+
+重大突破！！！！
+
+将前端与后端连接起来啦！！
+
+用test.docx做实验模板，进行小demo实验
+
+大成功！
+
+接上次更新，给"ok"设置了一个信号，一个槽（新建槽"add()"）
+
+在代码中的class mywindow 这个层级下进行定义
+
+    class MyWindow(QtWidgets. QMainWindow, Ui_MainWindow):
+        def __init__(self):
+            super(MyWindow, self).__init__()
+            self.setupUi(self)
+
+        def add(self):
+            year = self.year.displayText()
+            month = self.month.displayText()
+            day = self.day.displayText()
+            lesson_zh = self.lesson_zh.displayText()
+            lesson_en = self.lesson_en.displayText()
+            meal_zh = self.meal_zh.currentText()
+            protein_1_zh = self.protein_1_zh.displayText()
+
+            from mailmerge import MailMerge
+
+            template = 'test.docx'
+            document = MailMerge(template)
+            ……
+
+最终实现了前后端的连接
+
+但是新问题：
+
+将完整版代码写入后，会引起崩溃。是否是因为内存原因？
