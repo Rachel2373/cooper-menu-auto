@@ -330,7 +330,7 @@ class MyWindow(QtWidgets. QMainWindow, Ui_MainWindow):
                        lesson_en=lesson_en,
                        protein_1_zh=protein_1_zh,
                        protein_1_en=protein_dict[protein_1_zh],)
-        document.write('demo2.docx')
+        document.write('{0}-{1}-{2}{3}{4}菜单.docx'.format(year, month, day, lesson_zh, meal_zh))
 
 
 if __name__ == "__main__":
